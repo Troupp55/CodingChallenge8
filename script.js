@@ -1,5 +1,5 @@
 //U61753810
-document.getElementById('registration-form').addEventListener('submit', function(event) {
+document.getElementById('registrationForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form from reloading the page
 
     // Get form values
@@ -14,7 +14,7 @@ document.getElementById('registration-form').addEventListener('submit', function
     });
 
     // Validate form fields
-    if (name === '' || email === '' || eventDate === '' || mealPreferences.length === 0) {
+    if (!name || !email || !eventDate || mealPreferences.length === 0) {
         alert('Please fill out all fields and select at least one meal preference.');
         return;
     }
