@@ -11,3 +11,10 @@ document.getElementById('registration-form').addEventListener('submit', function
     document.querySelectorAll('input[name="meal"]:checked').forEach(checkbox => {
         mealPreferences.push(checkbox.value);
     });
+
+        // Validate form fields
+        if (name === '' || email === '' || eventDate === '' || mealPreferences.length === 0) {
+            alert('Please fill out all fields and select at least one meal preference.');
+            return;
+        }
+    
