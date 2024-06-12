@@ -1,4 +1,5 @@
-//U61753810
+console.log("Script loaded"); // To confirm script is loaded
+
 document.getElementById('registrationForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form from reloading the page
 
