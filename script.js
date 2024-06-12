@@ -17,4 +17,14 @@ document.getElementById('registration-form').addEventListener('submit', function
             alert('Please fill out all fields and select at least one meal preference.');
             return;
         }
+        // Display registration details
+        const registrationDetails = document.getElementById('registration-details');
+        registrationDetails.innerHTML = `
+            <h2>Registration Details</h2>
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Event Date:</strong> ${eventDate}</p>
+            <p><strong>Meal Preferences:</strong> ${mealPreferences.join(', ')}</p>
+        `;
+    
     
