@@ -1,8 +1,7 @@
 //U61753810
-
 document.getElementById('registration-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form from reloading the page
-});
+
     // Get form values
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
@@ -14,18 +13,20 @@ document.getElementById('registration-form').addEventListener('submit', function
         mealPreferences.push(checkbox.value);
     });
 
-        // Validate form fields
-        if (name === '' || email === '' || eventDate === '' || mealPreferences.length === 0) {
-            alert('Please fill out all fields and select at least one meal preference.');
-            return;
-        }
-        // Display registration details
-        const registrationDetails = document.getElementById('registration-details');
-        registrationDetails.innerHTML = `
-            <h2>Registration Details</h2>
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Event Date:</strong> ${eventDate}</p>
-            <p><strong>Meal Preferences:</strong> ${mealPreferences.join(', ')}</p>
-        `;
-    
+    // Validate form fields
+    if (name === '' || email === '' || eventDate === '' || mealPreferences.length === 0) {
+        alert('Please fill out all fields and select at least one meal preference.');
+        return;
+    }
+
+    // Display registration details
+    const registrationDetails = document.getElementById('registration-details');
+    registrationDetails.innerHTML = `
+        <h2>Registration Details</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Event Date:</strong> ${eventDate}</p>
+        <p><strong>Meal Preferences:</strong> ${mealPreferences.join(', ')}</p>
+    `;
+});
+
