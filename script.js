@@ -1,3 +1,5 @@
+//U61753810
+
 document.getElementById('registration-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form from reloading the page
 });
@@ -26,5 +28,4 @@ document.getElementById('registration-form').addEventListener('submit', function
             <p><strong>Event Date:</strong> ${eventDate}</p>
             <p><strong>Meal Preferences:</strong> ${mealPreferences.join(', ')}</p>
         `;
-    
     
